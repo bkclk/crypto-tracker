@@ -2,11 +2,14 @@ import React, { useEffect } from "react";
 import { CoinContainer, CoinItems, Divcolor, HomeLink } from "./Coin.style";
 import { connect } from "react-redux";
 import { getCoin, clearCoin } from "../../actions";
-const Coin = ({ getCoin, coin }) => {
+const Coin = ({ getCoin, clearCoin, coin }) => {
   useEffect(() => {
     getCoin(window.location.pathname);
-    return () => clearCoin();
+    return () => {
+      clearCoin();
+    };
   }, []);
+
   const renderList = () => {
     if (coin.length < 1) {
       console.log("boş");

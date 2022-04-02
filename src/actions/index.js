@@ -21,6 +21,5 @@ export const getCoin = (id) => async (dispatch) => {
 export const clearCoin = () => {
   return {
     type: "CLEAR_COIN",
-    payload: [],
   };
 };

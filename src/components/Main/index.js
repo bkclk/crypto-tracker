@@ -16,7 +16,7 @@ import { getCryptos } from "../../actions";
 let Main = (props) => {
   useEffect(() => {
     props.getCryptos();
-  });
+  }, []);
 
   const renderList = () => {
     return props.cryptoList.map((crypto) => (
